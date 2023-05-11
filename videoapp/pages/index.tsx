@@ -1,10 +1,20 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import React from 'react';
+import axios from 'axios';
 
-const inter = Inter({ subsets: ['latin'] })
+import VideoCard from '../components/VideoCard';
+import { BASE_URL } from '../utils';
+import { Video } from '../types';
+import NoResults from '../components/NoResults';
 
-export default function Home() {
+interface IProps {
+  videos: Video[];
+}
+
+const Home = ({ videos }: IProps) => {
   return (
     <div>Under Maintainance</div>
   )
 }
+
+export default Home;
